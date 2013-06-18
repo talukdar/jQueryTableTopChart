@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JQuery Table Top Chart</title>
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery-2.0.2.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="js/tabletopchart.js"></script>
+
+    <script>
+        $( document).ready(function() {
+            $('#my_table_id').tabletopchart({
+                chartType:  'AnnotatedTimeLine',
+                chartDivID: 'chart_div',
+                hideTable:  true,
+                chartOption:{
+                    'displayAnnotations': true
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="container">
+    <h1>ANNOTATED TIME LINE CHART</h1>
+    <div id="chart_div" style="width: 900px; height: 500px"></div>
+
+    <table id='my_table_id'>
+        <thead>
+        <tr>
+            <th>Date</th>
+            <th>Sold Pencils</th>
+            <th>Title1</th>
+            <th>Text1</th>
+            <th>Sold Pen</th>
+            <th>Title2</th>
+            <th>Text3</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>2013-2-1</td>
+            <td>14045</td>
+            <td></td>
+            <td></td>
+            <td>20374</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2013-2-2</td>
+            <td>55022</td>
+            <td></td>
+            <td></td>
+            <td>50766</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2013-2-3</td>
+            <td>30000</td>
+            <td></td>
+            <td></td>
+            <td>40645</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2013-2-4</td>
+            <td>75284</td>
+            <td></td>
+            <td></td>
+            <td>14334</td>
+            <td>Out of Stock</td>
+            <td>Ran out of stock on pens at 4pm</td>
+        </tr>
+        <tr>
+            <td>2013-2-5</td>
+            <td>41476</td>
+            <td>Bought Pens</td>
+            <td>Bought 200k pens</td>
+            <td>66467</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2013-2-6</td>
+            <td>33322</td>
+            <td></td>
+            <td></td>
+            <td>39463</td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

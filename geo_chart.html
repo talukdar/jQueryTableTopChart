@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>JQuery Table Top Chart</title>
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery-2.0.2.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+    </script>
+
+    <script type="text/javascript" src="js/tabletopchart.js"></script>
+
+    <script>
+        $( document).ready(function() {
+            $('#my_table').tabletopchart({
+                chartType: 'geochart',
+                chartDivID: 'chart_div',
+                hideTable:  true
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="container">
+    <h1>GEO CHART</h1>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+    <table id='my_table'style="display: none">
+        <thead>
+        <tr>
+            <th>Country</th>
+            <th>Population</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>United States</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>Brazil</td>
+            <td>400</td>
+        </tr>
+        <tr>
+            <td>Canada</td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>France</td>
+            <td>600</td>
+        </tr>
+        <tr>
+            <td>RU</td>
+            <td>700</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

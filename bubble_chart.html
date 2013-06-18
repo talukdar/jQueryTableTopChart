@@ -1,0 +1,105 @@
+<html>
+<head>
+    <title>JQuery Table Top Chart</title>
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery-2.0.2.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+    </script>
+
+    <script type="text/javascript" src="js/tabletopchart.js"></script>
+
+    <script>
+        $( document).ready(function() {
+            $('#my_table_id').tabletopchart({
+                chartType: 'BubbleChart',
+                chartDivID: 'chart_div',
+                hideTable:  true,
+                chartOption:{
+                    title: 'Correlation between life expectancy, fertility rate and population of some world countries (2010)',
+                    hAxis: {title: 'Life Expectancy'},
+                    vAxis: {title: 'Fertility Rate'},
+                    bubble: {textStyle: {fontSize: 11}}
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="container">
+    <h1>BUBBLE CHART</h1>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+    <table id='my_table_id' style="display: none">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Life Expectancy</th>
+                <th>Fertility Rate</th>
+                <th>Region</th>
+                <th>Population</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CAN</td>
+                <td>80.66</td>
+                <td>1.67</td>
+                <td>North America</td>
+                <td>33739900</td>
+            </tr>
+            <tr>
+                <td>DEU</td>
+                <td>79.84</td>
+                <td>1.36</td>
+                <td>Europe</td>
+                <td>81902307</td>
+            </tr>
+            <tr>
+                <td>DNK</td>
+                <td>78.6</td>
+                <td>1.84</td>
+                <td>Europe</td>
+                <td>5523095</td>
+            </tr>
+            <tr>
+                <td>EGY</td>
+                <td>72.73</td>
+                <td>2.78</td>
+                <td>Middle East</td>
+                <td>79716203</td>
+            </tr>
+            <tr>
+                <td>GBR</td>
+                <td>80.05</td>
+                <td>2</td>
+                <td>Europe</td>
+                <td>61801570</td>
+            </tr>
+            <tr>
+                <td>IRN</td>
+                <td>72.49</td>
+                <td>1.7</td>
+                <td>Middle East</td>
+                <td>73137148</td>
+            </tr>
+            <tr>
+                <td>RUS</td>
+                <td>68.6</td>
+                <td>1.54</td>
+                <td>Europe</td>
+                <td>141850000</td>
+            </tr>
+            <tr>
+                <td>USA</td>
+                <td>78.09</td>
+                <td>2.05</td>
+                <td>North America</td>
+                <td>307007000</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

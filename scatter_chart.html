@@ -1,0 +1,66 @@
+<html>
+<head>
+    <title>JQuery Table Top Chart</title>
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery-2.0.2.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+    </script>
+
+    <script type="text/javascript" src="js/tabletopchart.js"></script>
+
+    <script>
+        $( document).ready(function() {
+            $('#my_table').tabletopchart({
+                chartType: 'ScatterChart',
+                chartDivID: 'chart_div',
+                hideTable:  true,
+                chartOption:{
+                    title: 'Age vs. Weight comparison',
+                    hAxis: {title: 'Age', minValue: 0, maxValue: 15},
+                    vAxis: {title: 'Weight', minValue: 0, maxValue: 15},
+                    legend: 'none'
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="container">
+    <h1>SCATTER CHART</h1>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+    <table id='my_table'style="display: none">
+        <thead>
+        <tr>
+            <th>Age</th>
+            <th>Weight</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>8</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5.5</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3.5</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
